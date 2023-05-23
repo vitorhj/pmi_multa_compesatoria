@@ -5,7 +5,9 @@
 <table width=100% height=100% border=1 cellpadding=0 cellspacing=0 bordercolor=#2b2d8a><tr><td>
 <table width=100% height=100% border=0 cellpadding=0 cellspacing=0>
 <tr><td height=500 width=1></td><td height=100% width=100% align=center valign=top>
+<BR>
 <img src=cabecalho.jpeg width=700><br><br>
+
 <form id="myForm">
 <table>
 <tr><th colspan=2><b>Dados do Imóvel:</b></th></tr>
@@ -1545,7 +1547,6 @@
 <option value="6">ZOZIMO JOSE PEIXOTO - BECO (CENTRO)</option>
 <option value="6">ZOZIMO JOSE PEIXOTO - TRAVESSA (CENTRO)</option>
 <option value="2">ZULMIRA LEOPOLDINA MACHADO (CORDEIROS)</option>
-<option value="2">TESTE VÍTOR (TESTE)</option>
 </datalist>
 </td></tr>
 
@@ -1625,16 +1626,58 @@
 <tr><td>Área de lazer faltante:</td><td><input type=text size=15 name="inf_al" id="inf_al">m²</td></tr>
 <tr><td>Área construída que extrapola a Taxa de Ocupação:</td><td><input type=text size=15 id= "inf_to" name="inf_to">m²</td></tr>
 <tr><th colspan=2><input type="button" onclick="mostrarvalor()" value="Calcula">
-
 </table>
+
 </form>
+
+<table>
 <BR><BR>
 <b>Valor da Multa Compensatória: <div id="result" name="result"></div></b>
+</table>
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
 
 
-</td></tr></table>
-</td></tr></table>
-</font>
+<table>
+<BR>
+<img src=cabecalho.jpeg width=700><br><br>
+
+<b>Forma de Cálculo:</b>
+<BR><BR>
+<tr><td>A base de cálculo e valor da multa compensatória abaixo apresentados, podem ser verificados no capítulo VI da Lei Complentar 429/2023:</td><td>
+<BR><BR>
+<tr><td>1) Cálculo da Base da Multa Compensatória (BMC):</td><td>
+<BR><BR>
+<tr><td>BMC = VMQx FT x FV x FS x FA x FI x FU x FL</td><td>
+<BR><BR>
+<tr><td>BMC: Valor Base da Multa Compensatória (R$/m²)</td><td>
+<tr><td>VMQ: Valor do Metro Quadrado de Construção (Tabela II, LC 20/2002)</td><td>
+<tr><td>FT: Fator de Correção quanto à Topografia (Tabela III, LC 20/2002)</td><td>
+<tr><td>FV: Fator de Correção quanto à Largura da Via (Tabela IV, LC 20/2002)</td><td>
+<tr><td>FS: Fator de Correção quanto à Situação do Lote (Tabela V, LC 20/2002)</td><td>
+<tr><td>FA: Fator de Correção quanto ao Acabamento (Tabela VI, LC 20/2002)</td><td>
+<tr><td>FI: Fator de Correção quanto à Idade da Edificação (Tabela VII, LC 20/2002)</td><td>
+<tr><td>FU: Fator de Correção quanto ao Tipo de Uso (Tabela VIII, LC 20/2002)</td><td>
+<tr><td>FL: Fator de Correção quanto à Localização (Tabela II, Anexo I, LC 429/2023)</td><td>
+<BR><BR>
+<tr><td>2) Cálculo do Valor da Multa Compensatória (VMC):</td><td>
+<BR><BR>
+<tr><td>VMC = Somatório ( BMC * Ai * %i )</td><td>
+<BR><BR>
+<tr><td>VMC: Valor Total da Multa Compensatória (R$)</td><td>
+<tr><td>BMC: Valor Base da Multa Compensatória (R$/m²)</td><td>
+<tr><td>%i: Percentual correspondente a cada infração (Tabela I, Anexo I, LC 429/2023)</td><td>
+<tr><td>Ai: Área correspondente à infração (m²)</td><td>
+</table>
+
+<table>
+<BR><BR>
+<b>Memorial de Cálculo:</b>
+<BR><BR>
+<tr><td></td><tr>
+<BR><BR>
+</table>
+
 
 
 <script>
@@ -1702,12 +1745,11 @@ function mostrarvalor() {
   imprimir_multa = document.getElementById("result");
   imprimir_multa.innerHTML = multa.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
-
  
 }
 </script>
 
-<b>Memorial de Cálculo: <div id="result" name="result"></div></b>
-  
+
+
 </body>
 </html>
